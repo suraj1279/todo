@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --checkbox-shadow: rgba(238, 156, 167, 0.2);
+  --add-button: #ee9ca7;
+  --add-button-shadow: rgba(238, 156, 167, 0.4);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      62deg,
+      rgba(9, 235, 21, 0.973) 13%,
+      rgba(4, 119, 206, 0.5) 4%
+    ),
+    linear-gradient(
+      44deg,
+      rgba(236, 7, 18, 0.079) 39%,
+      rgba(104, 20, 238, 0.5) 18%
+    );
+  background-blend-mode: normal, lighten, multiply, hard-light;
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+input[type="checkbox"] {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid green;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: greenyellow;
+}
+
+input {
+  outline: none;
+}
+
+.app-container {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+  max-height: 100%;
+  background-color: #a6cce7;
+  padding: 24px;
+  overflow: auto;
+  box-shadow: 0 10px 10px -1px black;
+}
+
+.app-header {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.submit-task {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border: none;
+  background: var(--add-button);
+  color: #fff;
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px 0 var(--add-button-shadow);
+}
+
+.add-task {
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+}
+
+.task-input {
+  border-right: none;
+  width: 100%;
+  padding: 0 4px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  margin-right: 12px;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 20px;
+
+  &:placeholder {
+    color: #fff;
+  }
+}
+
+.task-list-item {
+  background-color: #191933;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin: 30px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #10101d;
+  color: white;
+  outline: none;
+  display: block;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  background-color: none;
+}
+form {
+  display: flex;
+  justify-content: space-around;
+}
